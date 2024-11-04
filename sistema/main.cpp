@@ -17,12 +17,12 @@ void Principal::executar() {
     Einstein.calcIdade(3, 11, 2024);
     Newton.calcIdade(3, 11, 2024);
 
-    std::cout << Einstein.getNome() << ": "
-        << Einstein.getIdade() << " - "
+    std::cout << Einstein.getNome() << " tem "
+        << Einstein.getIdade() << " anos. Trabalha em: "
         << Einstein.getUni() << std::endl;
 
-    std::cout << Newton.getNome() << ": "
-        << Newton.getIdade() << " - "
+    std::cout << Newton.getNome() << " tem "
+        << Newton.getIdade() << " anos. Trabalha em: "
         << Newton.getUni() << std::endl;
 }
 

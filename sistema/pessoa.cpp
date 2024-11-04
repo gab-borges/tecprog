@@ -1,7 +1,7 @@
 #include "pessoa.hpp"
 
-Pessoa::Pessoa(int dia, int mes, int ano, std::string nomeP) {
-    inicializa(dia, mes, ano, nomeP);
+Pessoa::Pessoa(int dia, int mes, int ano, std::string nomeU) {
+    inicializa(dia, mes, ano, nomeU);
 }
 
 Pessoa::Pessoa() {
@@ -11,11 +11,11 @@ Pessoa::Pessoa() {
 Pessoa::~Pessoa() {
 }
 
-void Pessoa::inicializa(int dia, int mes, int ano, std::string nomeP) {
+void Pessoa::inicializa(int dia, int mes, int ano, std::string nomeU) {
     diaN = dia;
     mesN = mes;
     anoN = ano;
-    nome = nomeP;
+    nome = nomeU;
 
     uni = nullptr;
     idade = -1;
@@ -39,8 +39,8 @@ std::string Pessoa::getNome() {
     return nome;
 }
 
-void Pessoa::setUni(Universidade* uniP) {
-    uni = uniP;
+void Pessoa::setUni(Universidade* uniU) {
+    uni = uniU;
 }
 
 std::string Pessoa::getUni() {

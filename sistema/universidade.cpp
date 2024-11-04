@@ -14,3 +14,11 @@ void Universidade::setNome(std::string nomeU) {
 std::string Universidade::getNome() {
     return nome;
 }
+
+void Departamento::setNomeDpto(std::string nomeDpto) {
+    dpto.setNome(nomeDpto);
+}
+
+std::string Departamento::getNomeDpto() {
+    return dpto.getNome();
+}
