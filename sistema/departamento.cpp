@@ -1,7 +1,7 @@
 #include "departamento.hpp"
+#include "universidade.hpp"
 
-Departamento::Departamento(int idU, std::string nomeU) {
-    id = idU;
+Departamento::Departamento(std::string nomeU) {
     nome = nomeU;
 }
 
@@ -14,6 +14,18 @@ void Departamento::setNome(std::string nomeU) {
 
 std::string Departamento::getNome() {
     return nome;
+}
+
+void Departamento::setUni(Universidade* uniU) {
+    uni = uniU;
+}
+
+std::string Departamento::getUni() {
+    return uni->getNome();
+}
+
+void Departamento::setId(int idU) {
+    id = idU;
 }
 
 int Departamento::getId() {

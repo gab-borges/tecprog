@@ -21,6 +21,14 @@ void Pessoa::inicializa(int dia, int mes, int ano, std::string nomeU) {
     idade = -1;
 }
 
+void Pessoa::imprimirFicha() {
+    std::cout <<
+    "Nome: " << nome << std::endl <<
+    "Idade: " << idade << std::endl <<
+    "Universidade: " << uni->getNome() << std::endl <<
+    "Departamento: " << dpto->getNome() << std::endl;
+}
+
 void Pessoa::calcIdade(int diaAtual, int mesAtual, int anoAtual) {
     idade = anoAtual - anoN;
 
@@ -48,4 +56,20 @@ std::string Pessoa::getUni() {
         return uni->getNome();
     
     return "";
+}
+
+void Pessoa::setDpto(Departamento* dptoU) {
+    dpto = dptoU;
+}
+
+std::string Pessoa::getDpto() {
+    return dpto->getNome();
+}
+
+void Pessoa::setId(int idU) {
+    id = idU;
+}
+
+int Pessoa::getId() {
+    return id;
 }

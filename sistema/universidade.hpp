@@ -1,13 +1,17 @@
 
 #pragma once
 
+#include <iostream>
 #include <string>
+#include <vector>
 #include "departamento.hpp"
+
+class Departamento;
 
 class Universidade {
 private:
     std::string nome;
-    Departamento dpto;
+    std::vector<Departamento*> dptos;
 
 public:
     Universidade(std::string nomeU = "");
@@ -16,6 +20,6 @@ public:
     void setNome(std::string nomeU);
     std::string getNome();
 
-    void setNomeDpto(std::string nomeDpto);
-    std::string getNomeDpto();
+    void setDpto(Departamento* dptoU);
+    void printDptos();
 };

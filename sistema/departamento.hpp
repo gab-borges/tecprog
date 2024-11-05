@@ -3,17 +3,24 @@
 
 #include <string>
 
+class Universidade;
+
 class Departamento {
 private:
-    int id;
     std::string nome;
+    Universidade* uni;
+    int id;
 
 public:
-    Departamento(int idU=0, std::string nomeU = "");
+    Departamento(std::string nomeU = "");
     ~Departamento();
 
     void setNome(std::string nomeU);
     std::string getNome();
 
+    void setUni(Universidade* uniU);
+    std::string getUni();
+
+    void setId(int idU);
     int getId();
 };

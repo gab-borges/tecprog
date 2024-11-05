@@ -15,10 +15,13 @@ std::string Universidade::getNome() {
     return nome;
 }
 
-void Departamento::setNomeDpto(std::string nomeDpto) {
-    dpto.setNome(nomeDpto);
+void Universidade::setDpto(Departamento* dptoU) {
+    dptos.push_back(dptoU);
+
+    dptoU->setUni(this);
 }
 
-std::string Departamento::getNomeDpto() {
-    return dpto.getNome();
+void Universidade::printDptos() {
+    for (auto it : dptos)
+        std::cout << it->getNome() << std::endl;
 }
